@@ -4,9 +4,21 @@
   "description": "",
   "main": "./dist/owl-js-utils.js",
   "scripts": {
-    "build:watch": "webpack --watch"
+    "build:watch": "webpack --watch",
+    "build": "webpack"
   },
-  "keywords": [],
+  "keywords": [
+    "owl",
+    "utils",
+    "array",
+    "object",
+    "function",
+    "string",
+    "axios",
+    "event-bus",
+    "pub-sub",
+    "promise"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
