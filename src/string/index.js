@@ -24,3 +24,24 @@ export function getRandomString(length) {
   }
   return randomStr;
 }
+
+/**
+ * @function 首字母大写
+ * @param {str} str
+ * @returns {String} result
+ * @author 🦉OwlLai🦉 2022/06/03
+ */
+export function fistLetterUpper(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/**
+ * @function 电话号码隐藏中间四位为****
+ * @param {number} tel
+ * @returns {String} result
+ * @author 🦉OwlLai🦉 2022/06/03
+ */
+export function formatTel(tel) {
+  tel = String(tel);
+  return tel.substr(0, 3) + "****" + tel.substr(7);
+}

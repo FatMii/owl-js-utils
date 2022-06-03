@@ -14,5 +14,5 @@ export function isSameArray(a, b) {
   if (a.prototype !== b.prototype) return false;
   let keys = Object.keys(a);
   if (keys.length !== Object.keys(b).length) return false;
-  return keys.every((k) => equals(a[k], b[k]));
+  return keys.every((k) => isSameArray(a[k], b[k]));
 }
