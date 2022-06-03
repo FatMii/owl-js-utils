@@ -81,10 +81,9 @@ export function isEmojiCharacter(value) {
   return false;
 }
 
-
 /**
  * @function 判断是移动还是PC设备
- * @returns {String} result
+ * @returns {String} 'mobile' || 'desktop'
  * @author 🦉OwlLai🦉 2022/06/03
  */
 export function isMobile() {
@@ -96,4 +95,79 @@ export function isMobile() {
     return "mobile";
   }
   return "desktop";
+}
+
+/**
+ * @function 判断是否是苹果还是安卓移动设备
+ * @returns {Boolean} result
+ * @author 🦉OwlLai🦉 2022/06/03
+ */
+export function isAppleMobileDevice() {
+  let reg = /iphone|ipod|ipad|Macintosh/i;
+  return reg.test(navigator.userAgent.toLowerCase());
+}
+
+/**
+ * @function 判断是否是微信/QQ内置浏览器
+ * @returns {Boolean} result
+ * @author 🦉OwlLai🦉 2022/06/03
+ */
+export function broswer() {
+  const ua = navigator.userAgent.toLowerCase();
+  if (ua.match(/MicroMessenger/i) == "micromessenger") {
+    return "weixin";
+  } else if (ua.match(/QQ/i) == "qq") {
+    return "QQ";
+  }
+  return false;
+}
+
+/**
+ * @function 获取浏览器型号和版本
+ * @returns {Object} result {type:"IE",version:9}
+ * @author 🦉OwlLai🦉 2022/06/03
+ */
+export function getExplorerInfo() {
+  let t = navigator.userAgent.toLowerCase();
+  return 0 <= t.indexOf("msie")
+    ? {
+        //ie < 11
+        type: "IE",
+        version: Number(t.match(/msie ([\d]+)/)[1]),
+      }
+    : !!t.match(/trident\/.+?rv:(([\d.]+))/)
+    ? {
+        // ie 11
+        type: "IE",
+        version: 11,
+      }
+    : 0 <= t.indexOf("edge")
+    ? {
+        type: "Edge",
+        version: Number(t.match(/edge\/([\d]+)/)[1]),
+      }
+    : 0 <= t.indexOf("firefox")
+    ? {
+        type: "Firefox",
+        version: Number(t.match(/firefox\/([\d]+)/)[1]),
+      }
+    : 0 <= t.indexOf("chrome")
+    ? {
+        type: "Chrome",
+        version: Number(t.match(/chrome\/([\d]+)/)[1]),
+      }
+    : 0 <= t.indexOf("opera")
+    ? {
+        type: "Opera",
+        version: Number(t.match(/opera.([\d]+)/)[1]),
+      }
+    : 0 <= t.indexOf("Safari")
+    ? {
+        type: "Safari",
+        version: Number(t.match(/version\/([\d]+)/)[1]),
+      }
+    : {
+        type: t,
+        version: -1,
+      };
 }
