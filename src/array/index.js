@@ -3,7 +3,7 @@
  * @param {Array} a
  * @param {Array} b
  * @returns {Boolean} result 
- * @author Owllai 2022/06/03
+ * @author 🦉OwlLai🦉 2022/06/03 
  */
 export function isSameArray(a, b) {
   if (a === b) return true;

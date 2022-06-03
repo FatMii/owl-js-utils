@@ -2,7 +2,7 @@
  * @function 判断邮箱是否正确
  * @param  {String} str
  * @returns {Boolean} result
- * @author Owllai 2022/06/03
+ * @author 🦉OwlLai🦉 2022/06/03
  */
 export function isEmail(string) {
   let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
@@ -13,7 +13,7 @@ export function isEmail(string) {
  * @function 判断身份证是否正确
  * @param {String} idCard
  * @returns {Boolean} result
- * @author Owllai 2022/06/03
+ * @author 🦉OwlLai🦉 2022/06/03
  */
 export function isIdCard(idCard) {
   let reg =
@@ -25,7 +25,7 @@ export function isIdCard(idCard) {
  * @function 判断手机号码是否正确
  * @param {String} phoneNumber
  * @returns {Boolean} result
- * @author Owllai 2022/06/03
+ * @author 🦉OwlLai🦉 2022/06/03
  */
 export function isPhone(phoneNumber) {
   let reg = /^1[3-9]\d{9}$/;
