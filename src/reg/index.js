@@ -1,7 +1,7 @@
 /**
  * @function 判断邮箱是否正确
- * @param str {String}
- * @returns result {Boolean}
+ * @param  {String} str
+ * @returns {Boolean} result
  * @author Owllai 2022/06/03
  */
 export function isEmail(string) {
@@ -11,8 +11,8 @@ export function isEmail(string) {
 
 /**
  * @function 判断身份证是否正确
- * @param idCard {String}
- * @returns result {Boolean}
+ * @param {String} idCard
+ * @returns {Boolean} result
  * @author Owllai 2022/06/03
  */
 export function isIdCard(idCard) {
@@ -23,10 +23,11 @@ export function isIdCard(idCard) {
 
 /**
  * @function 判断手机号码是否正确
- * @param phoneNumber {String}
- * @returns result {Boolean}
+ * @param {String} phoneNumber
+ * @returns {Boolean} result
  * @author Owllai 2022/06/03
  */
-export function isPhone(phoneNumber){
-
+export function isPhone(phoneNumber) {
+  let reg = /^1[3-9]\d{9}$/;
+  return reg.test(phoneNumber);
 }

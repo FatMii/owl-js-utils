@@ -1,8 +1,8 @@
 /**
  * @function 判断两个数组是否相等
- * @param a {Array}
- * @param b {Array}
- * @returns result {Boolean}
+ * @param {Array} a
+ * @param {Array} b
+ * @returns {Boolean} result 
  * @author Owllai 2022/06/03
  */
 export function isSameArray(a, b) {
