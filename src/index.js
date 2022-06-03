@@ -4,4 +4,4 @@ export function test() {
   console.log("test()");
 }
 
-export { call } from "./function/call";
+
