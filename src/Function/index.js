@@ -30,7 +30,7 @@ export function debounce(fn, wait) {
  * @returns {Function}
  * @author 🦉OwlLai🦉 2022/06/03
  */
-export const throttle = (fn, delay) => {
+export function throttle(fn, delay) {
   let curTime = Date.now();
 
   return function () {
@@ -43,4 +43,4 @@ export const throttle = (fn, delay) => {
       return fn.apply(context, args);
     }
   };
-};
+}

@@ -38,7 +38,7 @@ export function isPhone(phoneNumber) {
  * @returns {Boolean} result
  * @author 🦉OwlLai🦉 2022/06/03
  */
-export function isEmojiCharacter(value) {
+export function isEmoji(value) {
   value = String(value);
   for (let i = 0; i < value.length; i++) {
     const hs = value.charCodeAt(i);
@@ -112,7 +112,7 @@ export function isAppleMobileDevice() {
  * @returns {Boolean} result
  * @author 🦉OwlLai🦉 2022/06/03
  */
-export function broswer() {
+export function getBroswerInfo() {
   const ua = navigator.userAgent.toLowerCase();
   if (ua.match(/MicroMessenger/i) == "micromessenger") {
     return "weixin";
