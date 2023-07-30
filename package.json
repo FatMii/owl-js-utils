@@ -1,8 +1,8 @@
 {
-  "name": "owl-js-utils",
-  "version": "1.0.0",
+  "name": "owl-js-utils", //npm上的名字 
+  "version": "1.0.3",     // 版本
   "description": "",
-  "main": "./dist/owl-js-utils.js",
+  "main": "./dist/owl-utils.js",
   "scripts": {
     "build:watch": "webpack --watch",
     "build": "webpack"
@@ -14,12 +14,9 @@
     "object",
     "function",
     "string",
-    "axios",
-    "event-bus",
-    "pub-sub",
-    "promise"
+    "Reg"
   ],
-  "author": "",
+  "author": "owllai",
   "license": "ISC",
   "dependencies": {
     "webpack": "^5.72.1",

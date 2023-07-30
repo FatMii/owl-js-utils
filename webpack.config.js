@@ -9,9 +9,9 @@ module.exports = {
     // 打包文件夹
     path: path.resolve(__dirname, "dist"),
     // 打包文件
-    filename: "owl-js-utils.js",
+    filename: "owl-utils.js",
     // 向外暴露的对象的名称
-    library: "owlJsUtils",
+    library: "owlUtils",
     // 打包生成库可以通过esm/commonjs/reqirejs的语法引入
     libraryTarget: "umd"
   }
