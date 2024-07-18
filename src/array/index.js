@@ -2,10 +2,11 @@
  * @function 判断两个数组是否相等
  * @param {Array} a
  * @param {Array} b
- * @returns {Boolean} result 
- * @author 🦉OwlLai🦉 2022/06/03 
+ * @returns {Boolean} result
+ * @author 🦉OwlLai🦉 2022/06/03
  */
 export function isSameArray(a, b) {
+  console.log("link test1");
   if (a === b) return true;
   if (a instanceof Date && b instanceof Date)
     return a.getTime() === b.getTime();
